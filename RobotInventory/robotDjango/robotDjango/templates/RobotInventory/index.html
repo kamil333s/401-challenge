@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Robots in stock</h3>
+    <ul>
+            {% for robot in robots %}
+                <li>
+                    <a href="{% url 'item_detail' robot.id %}">
+                            {{ robot.title|capfirst }}
+                    </a>
+                </li>
+            {% endfor %}
+    </ul>
+{% endblock %}

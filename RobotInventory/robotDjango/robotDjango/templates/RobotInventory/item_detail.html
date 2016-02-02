@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <a href="{% url 'index' %}">Back to item list</a>
+    <h3>{{ robot.title|capfirst }}</h3>
+    <p>{{ robot.amount }} currently in stock</p>
+    <h4>Description:</h4>
+    <p>{{ robot.description }}</p>
+{% endblock %}
